@@ -1,0 +1,302 @@
+/*
+ * Carrega a fonte "Roboto" do Google Fonts:
+ *    Referências:
+ *        https://fonts.google.com/specimen/Roboto
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+ /*
+  * Carrega a biblioteca Normalize que força a padronização dos estilos entre os
+  * navegadores:
+  *    Referências:
+  *        https://github.com/necolas/normalize.css
+  *        https://cdnjs.com/libraries/normalize
+  */
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+ 
+ /*
+  * Biblioteca de ícones:
+  *     Referências:
+  *        https://fontawesome.com/
+  *        https://cdnjs.com/libraries/font-awesome  
+  */
+ @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+ 
+ /* Todos os elementos */
+ * {
+     box-sizing: border-box;
+     outline: none;
+ }
+ 
+ /* Elementos da raiz e o #wrap */
+ html,
+ body,
+ #wrap {
+     /* Sticky footer */
+     position: relative;
+     width: 100%;
+ 
+     padding: 0;
+     margin: 0;
+     height: 100%;
+ }
+ 
+ /* Fonte padrão */
+ html,
+ body {
+     font-family: Roboto, sans-serif;
+     font-size: 16px;
+ }
+ 
+ /* Fundo da página */
+ body {
+     background-attachment: fixed;
+     background-color: rgba(25, 0, 255, 0.925);
+     background-image: url("/img/background.04.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ /* Formata links */
+ a {
+     text-decoration: none;
+     color: rgb(145, 158, 168);
+ }
+ 
+ a:hover {
+     color: rgb(0, 110, 255);
+ }
+ 
+ /* Limita o crescimento do conteúdo */
+ #wrap {
+     max-width: 1024px;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ /* Cabeçalho → header */
+ #wrap>header {
+     background: rgba(97, 109, 150, 0.85);
+     display: flex;
+     align-items: center;
+ }
+ 
+ /* Logotipo */
+ #wrap>header img {
+     width: 95px;
+     display: block;
+     margin: 0.5rem;
+ }
+ 
+ /* Título */
+ #wrap>header h1 {
+     font-size: 1.6rem;
+     margin: 0;
+     color: rgb(183, 185, 201);
+     text-align: center;
+ }
+ 
+ /* Slogan */
+ #wrap>header small,
+ #wrap>footer small {
+     display: block;
+     font-size: 68%;
+ }
+ 
+ #wrap>nav,
+ #wrap>footer {
+     background-color: rgba(12, 34, 131, 0.9);
+     display: flex;
+     justify-content: flex-end;
+     border-top: 1px dotted rgba(67, 38, 197, 0.664);
+     border-bottom: 1px dotted rgb(39, 97, 185);
+ }
+ 
+ #wrap>nav a {
+     color: rgb(156, 156, 187);
+     padding: 0.5rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     transition: .2s;
+ }
+ 
+ #wrap>nav a:hover {
+     background: rgb(10, 16, 104);
+     color: rgb(33, 11, 156);
+ }
+ 
+ #wrap>nav a:first-child {
+     margin-right: auto;
+ }
+ 
+ #wrap>nav a i {
+     font-size: 2rem;
+ }
+ 
+ #wrap>nav a span {
+     padding-top: .5rem;
+ }
+ 
+ /* Rodapé */
+ #wrap>footer {
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ #wrap>footer i {
+     font-size: 1.5rem;
+ }
+ 
+ #wrap>footer a {
+     color: rgba(140, 139, 153, 0.836);
+     padding: .25rem;
+ }
+ 
+ #wrap>footer a:hover {
+     background-color:rgba(140, 139, 153, 0.836);
+     color: rgba(140, 139, 153, 0.836);
+ }
+ 
+ #wrap>footer div a:hover {
+     background-color: transparent;
+     color:rgba(140, 139, 153, 0.836);
+ }
+ 
+ #wrap>footer div {
+     text-align: center;
+     color:rgba(140, 139, 153, 0.836);
+     font-size: 90%;
+ }
+ 
+ #wrap>footer div small {
+     font-size: 85%;
+ }
+ 
+ /* Conteúdo principal → main */
+ #wrap>main {
+     flex-grow: 1;
+ }
+ 
+ #wrap>main article,
+ #wrap>main aside {
+     padding: 1rem;
+     background-color: rgba(255, 255, 255, 0.9);
+ }
+ 
+ #wrap>main aside {
+     background-color: rgba(175, 181, 190, 0.9);
+     border-top: 3px dotted rgba(11, 72, 204, 0.932);
+ }
+ 
+ /* Ajustes para telas maiores */
+ 
+ /* Menu principal à partir de 475px */
+ @media screen and (min-width: 475px) {
+ 
+     #wrap>nav {
+         justify-content: center;
+     }
+ 
+     #wrap>nav a {
+         padding: 0.5rem 1rem;
+         flex-direction: row;
+     }
+ 
+     #wrap>nav a:first-child {
+         margin: 0;
+     }
+ 
+     #wrap>nav a i {
+         font-size: 1.2rem;
+     }
+ 
+     #wrap>nav a span {
+         padding-top: 0;
+         padding-left: .3rem;
+     }
+ 
+ }
+ 
+ /* Conteúdo à partir de 640px */
+ @media screen and (min-width: 640px) {
+ 
+     #wrap>main {
+         display: flex;
+     }
+ 
+     #wrap>main aside {
+         border-top: none;
+         border-left: 3px dotted rgb(22, 45, 175);
+         min-width: 200px;
+         max-width: 200px;
+     }
+     #wrap>main article {
+         flex-grow: 1;
+
+     }
+
+ }
+
+ #contactForm {
+    display: block;
+    margin: auto;
+    max-width: 475px;
+}
+
+label {
+    display: block;
+    padding: 0 0 .3rem .3rem;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: .25rem;
+    border-radius: .3rem;
+}
+
+input,
+textarea {
+    padding: .3rem;
+    width: 100%;
+    border: 1px solid rgb(249, 122, 122);
+    border-bottom: 3px solid rgb(249, 122, 122);
+    background: rgb(255, 218, 218);
+}
+
+textarea {
+    resize: vertical;
+    height: 5rem;
+}
+
+button {
+    color: white;
+    background: linear-gradient(rgb(133, 197, 250), rgb(28, 64, 94));
+    border: none;
+    padding: .5rem 1rem;
+}
+
+/* Campos com preenchimento válido recebem os estilos abaixo */
+input:valid,
+textarea:valid {
+    border: 1px solid green;
+    border-bottom: 3px solid green;
+    background-color: rgb(232, 240, 253);
+}
+
+/* Se o formulário está inválido, desabilita o botão de envio */
+#contactForm:invalid button {
+    background: linear-gradient(rgb(177, 177, 177), rgb(74, 74, 74));
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Oculta a mensagem de feedback que só será mostrada quando o formulário for enviado */
+#feedback {
+    display: none;
+}
